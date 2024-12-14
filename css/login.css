@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay to create blue tint */
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+
+/* Content Container */
+.left{
+    background: url('../puctur/Capture\ d\'écran\ 2024-12-07\ 183322.png')  ; /* Votre image de fond */
+    background-size: cover;
+    background-position: center;
+    width: 45%;
+}
+.bagh{
+    background-color: rgba(9, 0, 106, 0.833);
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Header Section */
+.header {
+    display: flex;
+    height: 20%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 3% 5% 0 5%;
+}
+
+
+
+.header h1 {
+    font-size: 40px;
+    margin-left: 15px ;
+    margin-top: 7%;
+
+}
+
+.title p {
+    
+    font-size: 40px;
+    margin-left: 8%;
+    margin-bottom: 10px;
+}
+
+.tes{
+    margin-left: 7%;
+    width: 150px;
+    padding: 13px 2px 2px 2px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.title1 p {
+    margin-top: 30px;
+    font-size: 25px;
+    margin-left: 8%;
+    margin-bottom: 10px;
+}
+
+.btn button{
+    background-color: #ffffff00; /* Green background */
+    color: white; /* White text */
+    border: #fff solid 3px; /* Remove borders */
+    padding: 25px 150px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    margin-left: 17%;
+    font-size: 17px;
+    margin-top: 10%;
+}
+
+/* Login Form Section */
+.content {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 55%;
+}
+
+.all_form{
+    display: flex;
+    gap: 20px;
+    
+}
+
+
+
+.login-form{
+    padding-left: 8%;
+    width:600px;
+}
+.login-form h2 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: rgba(19, 10, 128, 0.833);
+
+}
+
+.login-form label{
+    color: rgba(19, 10, 128, 0.833);
+    font-family: 'Arial', sans-serif; /* Specify your font */
+    font-weight: bold;
+}
+
+.login-form p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    margin-left: 4%;
+    color: #ada1a1;
+}
+
+.login-form .forme1 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.login-form input {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: #c7bfbf solid 1px;
+    color: rgba(19, 10, 128, 0.833);
+}
+
+.login-form input::placeholder {
+    color: #999;
+}
+
+.login-form button {
+    padding: 12px;
+    background-color: rgba(19, 10, 128, 0.833);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 15px 40px;
+}
+
+.login-form button:hover {
+    background-color: #000000;
+}
+
+.options label{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px 0;
+    color: #ada1a1;gap: 10px;
+}
+
+.options  input{
+    border: black solid;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+h5{
+    color: black;
+}

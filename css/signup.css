@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('../puctur/african-american-employer-holding-employment-agreement-handshaking-candidate-close-up-view\ 1.jpg') no-repeat center center fixed; /* Votre image de fond */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay to create blue tint */
+.overlay {
+    background-color: rgba(9, 0, 106, 0.833); /* Bleu foncé avec transparence */
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+
+/* Content Container */
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    height: 20%;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin: 3% 5% 0 5%;
+}
+
+
+
+.header h1 {
+    font-size: 90px;
+    margin-left: 15px ;
+    margin-top: 4%;
+
+}
+
+.title p {
+    font-size: 19px;
+    line-height: 1.2;
+    margin-left: 55%;
+    
+}
+
+/* Login Form Section */
+.content .login-form{
+    margin-left: 60px;
+}
+
+.login-form{
+    padding-left: 28%;
+    width:500px;
+}
+.login-form h2 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    width: 30%;
+}
+
+.login-form p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 33%;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-form input::placeholder {
+    color: #999;
+}
+
+.login-form button {
+    padding: 12px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #0b2948;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-form button:hover {
+    background-color: #fece0f;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.options a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
