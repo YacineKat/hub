@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <h1>Create New User Account</h1>
-            <form action="add_user.php" method="POST">
+            <form action="create.php" method="POST">
                 <div class="form-group">
                     <label for="first_name">First Name:</label>
                     <input type="text" name="first_name" id="first_name" required>
@@ -54,60 +54,7 @@
 </html>
 
 <?php
-session_start();
-
-if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    die("Access denied. Only admins can create users.");
-}
-
 include 'conn.php';
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['email']) || empty($_POST['phone_number']) || empty($_POST['password'])) {
-        die("All fields are required.");
-    }
-
-    $first_name = trim($_POST['first_name']);
-    $last_name = trim($_POST['last_name']);
-    $email = trim($_POST['email']);
-    $phone_number = trim($_POST['phone_number']);
-    $role = $_POST['role'];
-    $status = $_POST['status'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-    $valid_roles = ['agent', 'chef_service', 'chef_personnel'];
-    if (!in_array($role, $valid_roles)) {
-        die("Invalid role selected.");
-    }
-
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("Invalid email format.");
-    }
-
-    $created_by = $_SESSION['user_id'];
-
-    $sql = "INSERT INTO users (first_name, last_name, email, phone_number, role, status, password, created_by)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssssssi", $first_name, $last_name, $email, $phone_number, $role, $status, $password, $created_by);
-
-    if ($stmt->execute()) {
-        header("Location: admin_dashboard.php");
-        exit();
-    } else {
-        error_log("Error: " . $stmt->error);
-        if ($conn->errno === 1062) {
-            echo "Error: Email address is already registered.";
-        } else {
-            echo "Error: " . $stmt->error;
-        }
-    }
-
-    $stmt->close();
-}
-
-$conn->close();
 ?>
 
 

@@ -81,7 +81,6 @@
 include 'conn.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
     $first_name = $conn->real_escape_string($_POST['first_name']);
     $last_name = $conn->real_escape_string($_POST['last_name']);
     $email = $conn->real_escape_string($_POST['email']);
@@ -89,7 +88,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $conn->real_escape_string($_POST['password']);
     $confirm_password = $conn->real_escape_string($_POST['confirm_password']);
 
-    // Check if passwords match
     if ($password !== $confirm_password) {
         echo "Passwords do not match.";
     } else {
@@ -99,7 +97,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 VALUES ('$first_name', '$last_name', '$email', '$phone_number', '$hashed_password')";
 
         if ($conn->query($sql) === TRUE) {
-            // Redirect to admin_dashboard.php after successful account creation
             header("Location: admin_dashboard.php");
             exit();
         } else {

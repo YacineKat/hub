@@ -70,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             switch ($user['role']) {
                 case 'admin':
                     header("Location: admin_dashboard.php");
+                    $_SESSION['role']='admin';
                     exit();
                 case 'chef_personnel':
                     header("Location: chef_personnel_dashboard.php");
